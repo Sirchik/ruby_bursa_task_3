@@ -18,15 +18,17 @@ class LibraryManager
   end
 
   def new_book  author, title, price, pages_quantity, published_at
-
+    books.push(PublishedBook.new author, title, price, pages_quantity, published_at)
   end
 
   def new_reader  name, reading_speed
-
+    readers.push(Reader.new name, reading_speed)
   end
 
   def give_book_to_reader reader_name, book_title
-
+    reader = readers.find{|r| r.name = reader_name}
+    book = books.find{|b| b.title = book_title}
+    readers_with_books.push(ReaderWithBook.new book, reader)
   end
 
   def read_the_book reader_name, duration

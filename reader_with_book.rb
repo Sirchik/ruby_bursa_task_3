@@ -17,7 +17,7 @@ class ReaderWithBook < Reader
   end
 
   def hours_overdue
-    (Time.now.to_i - issue_datetime.to_time.to_i) / 3600.0
+    (Time.now.to_i - return_date.to_time.to_i) / 3600.0
   end
 
   def days_to_buy
