@@ -17,7 +17,7 @@ class LibraryManager
     @books = books
   end
 
-  def new_book  author, title, price, pages_quantity, published_at
+  def new_book author, title, price, pages_quantity, published_at
     books.push(PublishedBook.new author, title, price, pages_quantity, published_at)
   end
 
@@ -33,7 +33,7 @@ class LibraryManager
 
   def read_the_book reader_name, duration
 
-  def
+  end
 
   def reader_notification
 
